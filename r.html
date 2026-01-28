@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LinkedIn Redirect</title>
+</head>
+<body>
+<h3>LinkedIn OAuth Redirect Page</h3>
+<script>
+    // Display LinkedIn code and state parameters
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const state = params.get('state');
 
+    if (code) {
+        document.write("Authorization code: " + code + "<br>");
+        document.write("State: " + state);
+    } else {
+        document.write("No code received yet.");
+    }
+</script>
+</body>
+</html>
